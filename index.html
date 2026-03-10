@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Nathan Mausse</title>
+
+  <!-- Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- THEME TOGGLE -->
+ <div class="theme-toggle" id="themeToggle">
+
+    <div class="moon">
+        <div class="moon-star star1"></div>
+        <div class="moon-star star2"></div>
+    </div>
+
+    <div class="sun"></div>
+
+</div>
+
+<div class="space-background"></div>
+</div>
+
+  <!-- HEADER -->
+  <header class="header">
+    <nav class="nav">
+      <div class="logo">Nathan</div>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Accueil</a></li>
+        <li><a href="#about">À propos</a></li>
+        <li><a href="#parcours">Parcours</a></li>
+        <li><a href="#skills">Compétences</a></li>
+        <li><a href="#projects">Projets</a></li>
+        <li><a href="#bts">BTS SIO</a></li>
+        <li><a href="#procedures">Procédures</a></li>
+        <li><a href="#veille">Veille</a></li>
+        <li><a href="#documents">Documents</a></li>
+        <li><a href="#links">Liens</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <button class="burger" id="burger">☰</button>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="hero-section">
+    <div class="hero-content">
+      <h1Bonjour, je suis <span class="highlight neon">Nathan Mausse</span></h1>
+      <p class="neon">Étudiant BTS SIO — Développeur Web</p>
+
+      <div class="hero-buttons">
+        <a class="btn" href="#projects">Voir mes projets</a>
+        <a class="btn btn-outline" href="#contact">Me contacter</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+  <h2>À propos</h2>
+ <p class="section-text">
+  Passionné par l’informatique depuis plusieurs années, j’aime comprendre comment
+  fonctionnent les systèmes et créer des solutions concrètes.  
+  Aujourd’hui en BTS SIO SLAM, je développe mes compétences en développement web,
+  cybersécurité et réseaux avec un objectif clair : progresser chaque jour.
+</p>
+  <p class="section-text">
+    Vaux-Le-Pénil (77000) — France
+  </p>
+</section>
+
+  <!-- PARCOURS PRO -->
+  <section id="parcours" class="section section-alt">
+  <h2>Parcours professionnel</h2>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Job d’été — Crédit Agricole Titres (Brunoy)</h3>
+      <p><strong>Périodes :</strong> août 2024 & août 2025</p>
+      <p>
+        Missions réalisées au sein de l’entreprise dans le service coupon national et international,
+        ainsi que dans le service d’épargne salariale.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Stage informatique — Crédit Agricole Titres (Brunoy)</h3>
+      <p><strong>Période :</strong> janvier 2026</p>
+      <p>
+        Stage réalisé au sein de l’équipe informatique (service négociations).
+      </p>
+    </div>
+  </div>
+</section>
+
+
+  <!-- COMPETENCES TECHNIQUES -->
+ <section id="skills" class="section">
+  <h2>Compétences techniques</h2>
+
+  <div class="skills-grid">
+    <div class="skill-box">
+      <h3>Développement</h3>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>PHP</li>
+        <li>Java</li>
+      </ul>
+    </div>
+
+    <div class="skill-box">
+      <h3>Réseau / Sécurité</h3>
+      <ul>
+        <li>Cisco</li>
+        <li>Switches / Routers</li>
+        <li>Nmap</li>
+        <li>Wireshark</li>
+      </ul>
+    </div>
+
+    <div class="skill-box">
+      <h3>Base de données</h3>
+      <ul>
+        <li>SQL</li>
+      </ul>
+    </div>
+
+    <div class="skill-box">
+      <h3>Systèmes</h3>
+      <ul>
+        <li>Linux</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+  <!-- PROJETS -->
+  <section id="projects" class="section section-alt">
+    <h2>Projets informatiques</h2>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Koo2Fourchette</h3>
+        <p>Site vitrine basé sur une maquette, réalisé en HTML/CSS.</p>
+        <a class="card-link" href="#" target="_blank">Voir le projet</a>
+      </div>
+
+      <div class="card">
+        <h3>Site restauration</h3>
+        <p>Création d'un site où l'on peut réserver des plats, la quantité, etc...</p>
+        <a class="card-link" href="#" target="_blank">Voir le projet</a>
+      </div>
+
+      <div class="card">
+        <h3>Projet Symfony</h3>
+        <p>Création du front and back end d'un site vitrine pour un club de sport au choix en utilisant Symfony.</p>
+        <a class="card-link" href="#" target="_blank">Voir le projet</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BTS SIO -->
+  <section id="bts" class="section">
+    <h2>Résumé de la formation BTS SIO</h2>
+    <p class="section-text">
+      Le BTS SIO (Services Informatiques aux Organisations) est un diplôme français de niveau bac+2, 
+                    qui forme des techniciens spécialisés dans le domaine de l'informatique et des systèmes d'information. 
+                    Ce diplôme est particulièrement axé sur les besoins des entreprises en matière de gestion, 
+                   développement et sécurité des systèmes informatiques. Il se divise en deux spécialités :
+                  </p>
+                  <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwjqn9Ox8rOKAxV5SaQEHTHrPK0QFnoECBUQAQ&url=https%3A%2F%2Fpedagogie.ac-reunion.fr%2Ffileadmin%2FANNEXES-ACADEMIQUES%2F03-PEDAGOGIE%2F02-COLLEGE%2Flangues-vivantes%2Fanglais%2Fimages_Nawaz%2FBTS_SIO%2FREFERENTIEL_BTS_SIO-_RENOVATION_SESSION_2022-SIGNETS.pdf&usg=AOvVaw1-8QPpvU_34W7tkknPv39O&opi=89978449%22" target="_blank">Lien vers référentiel BTS SIO</a>
+    <div class="cards">
+      <div class="card">
+        <h3>SLAM</h3>
+<p>L'acronyme SLAM signifie « Solutions logicielles et applications métiers ». Cette spécialité est orientée vers le développement d’applications informatiques et la gestion des données. 
+                            Les diplômés de SLAM conçoivent, développent et maintiennent des logiciels adaptés aux besoins spécifiques des entreprises.</p>
+<h5>Débouché possible :</h5>
+<ul>
+<li>Analyste d’applications ou d’études</li>
+<li>Analyste programmeur</li>
+<li>Chargé d'études informatiques</li>
+<li>Développeur d’applications informatiques</li>
+<li>Développeur informatique</li>
+<li>Informaticien d'études</li>
+<li>Programmeur analyste</li>
+<li>Programmeur d’applications</li>
+<li>Responsable des services applicatifs</li>
+<li>Technicien d’études informatiques</li>
+</ul>
+</div>
+</diV>
+</section>
+
+      <div class="card">
+        <h3>Option SISR</h3>
+        <h3>SISR</h3>
+<p>L'acronyme SISR signifie « Solutions d’infrastructure, systèmes et réseaux ». Cette option est destinée aux étudiants qui s’orientent vers les métiers liés à la conception et la maintenance d’infrastructures réseaux.
+                            Assurer la sécurité, la maintenance et l’installation des réseaux et des équipements informatiques font partie des principales missions des futurs administrateurs, techniciens ou pilotes d’exploitation. 
+                            Des cours plus généraux viendront compléter la formation et apporter des compétences plus généralistes.</p>
+<h5>Débouché possible :</h5>
+<ul>
+<li>Administrateur systèmes et réseaux</li>
+<li>Informaticien support et déploiement</li>
+<li>Pilote d’exploitation</li>
+<li>Support systèmes et réseaux</li>
+<li>Technicien d’infrastructure</li>
+<li>Technicien de production</li>
+<li>Technicien systèmes et réseaux</li>
+<li>Technicien réseau et télécoms</li>
+</ul>
+</div>
+<div>
+  
+  <section id="veille" class="section">
+  <h2>Veille technologique</h2>
+
+  <div class="veille-intro">
+    <h3>Définition : Cyberattaque gouvernementale</h3>
+    <p>
+      Une cyberattaque gouvernementale désigne une opération informatique malveillante ciblant un gouvernement,
+      une institution publique ou une infrastructure d’État (attaques sur un État), ou bien des opérations offensives
+      menées par un gouvernement contre un autre acteur dans le cyberespace (attaques par un État).
+    </p>
+
+    <p>
+      Ces opérations impliquent souvent de l’espionnage, du sabotage, de la perturbation de services essentiels,
+      ou du vol de données sensibles, et sont fréquemment rattachées à des acteurs sponsorisés par des États
+      ou des groupes affiliés à des services de renseignement étrangers.
+    </p>
+
+    <p>
+      Elles sont considérées comme de la cyberguerre ou du cyberespionnage lorsqu’elles s’inscrivent
+      dans une logique stratégique entre États.
+    </p>
+  </div>
+
+  <h3 class="veille-title">Semaine par semaine : Cyberattaques gouvernementales</h3>
+
+  <div class="veille-timeline">
+
+    <!-- Décembre 2024 -->
+    <div class="veille-block">
+      <h4>Décembre 2024 — Semaine 1</h4>
+
+      <div class="cards">
+        <div class="card">
+          <h3>🇺🇸 Attaque contre le Département du Trésor des États-Unis</h3>
+          <p>
+            Piratage attribué à un acteur soutenu par le gouvernement chinois,
+            avec accès à des documents non classifiés via un fournisseur tiers compromis.
+          </p>
+          <a class="card-link" href="https://www.reuters.com/technology/cybersecurity/us-treasurys-workstations-hacked-cyberattack-by-china-afp-reports-2024-12-30/" target="_blank">Source : Reuters</a>
+        </div>
+
+        <div class="card">
+          <h3>🇹🇼 Taïwan : campagne massive de cyberattaques chinoises</h3>
+          <p>
+            Moyenne de 2,4 millions d’attaques quotidiennes en 2024,
+            principalement attribuées à des forces cyber chinoises.
+          </p>
+          <a class="card-link" href="https://www.reuters.com/technology/cybersecurity/chinese-cyberattacks-taiwan-government-averaged-24-mln-day-2024-report-says-2025-01-06/" target="_blank">Source : Reuters</a>
+        </div>
+
+        <div class="card">
+          <h3>Tensions cyber entre États-Unis et Chine</h3>
+          <p>
+            Les États-Unis ont exprimé leurs inquiétudes sur l’activité cyber malveillante
+            « parrainée par la RPC » lors d’échanges diplomatiques.
+          </p>
+          <a class="card-link" href="https://www.reuters.com/world/us/yellen-raised-serious-concern-about-chinas-malicious-cyber-activity-treasury-2025-01-07/" target="_blank">Source : Reuters</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Janvier 2025 -->
+    <div class="veille-block">
+      <h4> Semaine du 5 janvier 2025</h4>
+
+      <div class="cards">
+        <div class="card">
+          <h3>🇺🇸 Sanctions contre une entreprise chinoise liée à un groupe APT</h3>
+          <p>
+            Les États-Unis ont imposé des sanctions contre une société chinoise impliquée
+            dans des cyberattaques potentiellement dévastatrices.
+          </p>
+          <a class="card-link" href="https://www.reuters.com/technology/cybersecurity/us-sanctions-chinese-firm-over-potentially-deadly-ransomware-attack-2024-12-10/" target="_blank">Source : Reuters</a>
+        </div>
+
+        <div class="card">
+          <h3>Salt Typhoon : cyberespionnage sur l’infrastructure américaine</h3>
+          <p>
+            Campagne ayant ciblé des fournisseurs de services critiques et des agences gouvernementales,
+            étendant la portée du cyberespionnage contre les intérêts américains.
+          </p>
+          <a class="card-link" href="https://en.wikipedia.org/wiki/Salt_Typhoon?" target="_blank">Source : Wikipédia</a>
+        </div>
+
+        <div class="card">
+          <h3>🇹🇼 Taïwan : attaques continues contre l’infrastructure vitale</h3>
+          <p>
+            Les attaques attribuées à Pékin ont été jugées encore plus agressives,
+            avec 2,63 millions d’attaques par jour en 2025.
+          </p>
+          <a class="card-link" href="https://www.techradar.com/pro/security/taiwanese-infrastructure-suffered-over-2-5-million-chinese-cyberattacks-per-day-in-2025-report-reveals" target="_blank">Source : Reuters / TechRadar</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Février 2025 -->
+    <div class="veille-block">
+      <h4>Février 2025</h4>
+
+      <div class="cards">
+        <div class="card">
+          <h3>🇨🇦 Canada : lacunes dans la surveillance des cyberattaques</h3>
+          <p>
+            Un audit canadien révèle des points faibles dans le suivi et la réponse
+            aux cyberattaques sur les réseaux gouvernementaux.
+          </p>
+          <a class="card-link" href="https://www.hilltimes.com/story/2025/10/21/significant-gaps-in-governments-monitoring-and-response-to-cyberattacks-ag-finds/477934/" target="_blank">Source : Hill Times</a>
+        </div>
+
+        <div class="card">
+          <h3>🇬🇧 Royaume-Uni : attaques cyber « nationalement significatives »</h3>
+          <p>
+            Le NCSC britannique a traité plus de 200 attaques critiques dirigées
+            contre des institutions gouvernementales dans l’année.
+          </p>
+          <a class="card-link" href="https://www.ncsc.gov.uk/news/uk-experiencing-four-nationally-significant-cyber-attacks-weekly" target="_blank">Source : NCSC</a>
+        </div>
+
+        <div class="card">
+          <h3>🇰🇷/🇺🇸 États-Unis : inculpation de hackers chinois</h3>
+          <p>
+            Plusieurs ressortissants chinois ont été inculpés pour participation
+            à une campagne de cyberespionnage visant agences fédérales et entreprises stratégiques.
+          </p>
+          <a class="card-link" href="https://www.washingtonpost.com/national-security/2025/03/05/china-espionage-hacking-justice-department-charges/" target="_blank">Source : Washington Post</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Octobre 2025 -->
+    <div class="veille-block">
+      <h4>14 octobre 2025</h4>
+
+      <div class="cards">
+        <div class="card">
+          <h3>🇹🇼 Taïwan : hausse des cyberattaques et « armée de trolls »</h3>
+          <p>
+            Taïwan signale une augmentation jusqu’à 2,8 millions d’attaques par jour,
+            incluant des campagnes de désinformation.
+          </p>
+          <a class="card-link" href="https://www.reuters.com/world/asia-pacific/taiwan-flags-rise-chinese-cyberattacks-warns-online-troll-army-2025-10-14/" target="_blank">Source : Reuters</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Février 2026 -->
+    <div class="veille-block">
+      <h4>4 février 2026</h4>
+
+      <div class="cards">
+        <div class="card">
+          <h3>🇮🇹 Italie : cyberattaques russes autour des JO d’hiver</h3>
+          <p>
+            Les autorités italiennes annoncent avoir neutralisé des attaques supposées
+            orchestrées par la Russie, visant des sites gouvernementaux liés aux JO.
+          </p>
+          <a class="card-link" href="https://www.franceinfo.fr/les-jeux-olympiques/milan-cortina-2026/l-italie-dit-avoir-dejoue-des-cyberattaques-russes-visant-les-jeux-olympiques-d-hiver-de-milan-cortina_7783880.html" target="_blank">Source : Franceinfo</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Février 2026 -->
+    <div class="veille-block">
+      <h4>18 février 2026</h4>
+
+      <div class="cards">
+        <div class="card">
+          <h3>🇦🇪 UAE : plus de 70% des menaces seraient étatiques</h3>
+          <p>
+            Selon les autorités des Émirats arabes unis, plus de 70 % des menaces cyber
+            ciblent des infrastructures critiques et des gouvernements.
+          </p>
+          <a class="card-link" href="https://www.khaleejtimes.com/uae/over-70-of-cyber-threats-targeting-uae-are-state-sponsored-authority-says" target="_blank">Source : Reuters</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- DOCUMENTS -->
+  <section id="documents" class="section">
+    <h2>Documents</h2>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Rapport de stage</h3>
+        <p>Lien vers mon rapport de stage (PDF).</p>
+        <a class="card-link" href="docs/rapport-stage.pdf" target="_blank">Télécharger</a>
+      </div>
+
+      <div class="card">
+        <h3>CV</h3>
+        <p>Mon CV à jour (PDF).</p>
+        <a class="card-link" href="docs/cv-nathan-mausse.pdf" target="_blank">Télécharger</a>
+      </div>
+
+      <div class="card">
+        <h3>Lettre de motivation</h3>
+        <p>Lettre pour recherche d’alternance (PDF).</p>
+        <a class="card-link" href="docs/lettre-motivation.docx" target="_blank">Télécharger</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIENS -->
+  <section id="links" class="section section-alt">
+    <h2>Liens utiles</h2>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Référentiel officiel BTS SIO</h3>
+        <a class="card-link" href="https://www.education.gouv.fr/" target="_blank">
+          Accéder au site officiel
+        </a>
+      </div>
+
+      <div class="card">
+        <h3>Campus Saint Aspais</h3>
+        <a class="card-link" href="https://institutionsaintaspais.fr" target="_blank">
+          Accéder au site du Campus
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+
+    <form id="contact-form" class="contact-form">
+      <input type="text" id="name" placeholder="Votre nom" required>
+      <input type="email" id="email" placeholder="Votre email" required>
+      <textarea id="message" placeholder="Votre message" required></textarea>
+      <button type="submit" class="btn">Envoyer</button>
+    </form>
+
+    <p id="response-msg"></p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2026 Nathan Mausse — Portfolio BTS SIO</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
