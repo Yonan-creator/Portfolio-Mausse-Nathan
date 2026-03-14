@@ -167,6 +167,19 @@ body:not(.light-theme) .hero h1 {
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
+.skill-list li{
+display:flex;
+align-items:center;
+gap:8px;
+margin-bottom:8px;
+}
+
+.skill-list img{
+width:18px;
+height:18px;
+object-fit:contain;
+}
+
 /* CARDS */
 .cards {
   display: flex;
