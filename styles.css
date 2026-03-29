@@ -7,36 +7,28 @@
 
 html {
   scroll-behavior: smooth;
-  font-size: 16px; /* Base pour les rem */
+  font-size: 16px;
 }
 
 /* --- VARIABLES DE THÈME --- */
 :root {
   /* Thème Sombre (Défaut) */
   --bg-color: #0b0f1a;
-  --bg-alt-color: rgba(255, 255, 255, 0.03);
   --text-color: #ffffff;
   --text-opacity: 0.85;
-  --card-bg: rgba(255, 255, 255, 0.05);
-  --border-color: rgba(255, 255, 255, 0.08);
   --accent: #6c63ff;
   --header-bg: rgba(10, 10, 20, 0.9);
-  --toggle-moon-bg: #ffffff;
-  --toggle-sun-bg: #FFD93B;
+  --toggle-shadow: 0 4px 10px rgba(108, 99, 255, 0.3); /* Lueur violette subtile */
 }
 
 body.light-theme {
   /* Thème Clair */
   --bg-color: #f4f7fb;
-  --bg-alt-color: #e0e5ec;
   --text-color: #1a1a1a;
   --text-opacity: 0.9;
-  --card-bg: #ffffff;
-  --border-color: rgba(0, 0, 0, 0.1);
   --accent: #ff9800;
   --header-bg: rgba(244, 247, 251, 0.95);
-  --toggle-moon-bg: #1a1a1a;
-  --toggle-sun-bg: #ff9800;
+  --toggle-shadow: 0 4px 10px rgba(255, 152, 0, 0.3); /* Lueur orange subtile */
 }
 
 /* --- CORPS DE PAGE --- */
@@ -49,21 +41,14 @@ body {
   transition: background-color 0.4s ease, color 0.4s ease;
 }
 
-/* --- TITRES --- */
-h1, h2, h3, h4 {
-  font-weight: 600;
-  color: var(--text-color);
-  margin-bottom: 1rem;
-}
-
-/* --- EN-TÊTE ET NAVIGATION --- */
+/* --- EN-TÊTE --- */
 .header {
   position: sticky;
   top: 0;
   z-index: 999;
   background-color: var(--header-bg);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .nav {
@@ -71,44 +56,11 @@ h1, h2, h3, h4 {
   margin: auto;
   padding: 1rem 1.5rem;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 }
 
-.logo {
-  font-weight: 700;
-  letter-spacing: 1px;
-  font-size: 1.25rem;
-}
-
-.nav-links {
-  display: flex;
-  gap: 1.25rem;
-  list-style: none;
-}
-
-.nav-links a {
-  color: var(--text-color);
-  text-decoration: none;
-  font-size: 0.95rem;
-  opacity: var(--text-opacity);
-  transition: opacity 0.2s ease;
-}
-
-.nav-links a:hover {
-  opacity: 1;
-}
-
-.burger {
-  display: none;
-  font-size: 1.5rem;
-  background: transparent;
-  color: var(--text-color);
-  border: none;
-  cursor: pointer;
-}
-
-/* --- INTERRUPTEUR DE THÈME (Positionné dans le coin) --- */
+/* --- INTERRUPTEUR DE THÈME (GÈRE MAINTENANT LES IMAGES) --- */
 .theme-toggle {
   position: fixed;
   top: 20px;
@@ -120,69 +72,53 @@ h1, h2, h3, h4 {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--card-bg);
-  border: 1px solid var(--border-color);
   border-radius: 50%;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  box-shadow: var(--toggle-shadow);
   transition: transform 0.3s ease, background-color 0.4s ease;
+  overflow: hidden; /* Pour garder les images dans le cercle */
+  background-color: rgba(255, 255, 255, 0.05); /* Fond très subtil */
 }
 
 .theme-toggle:hover {
   transform: scale(1.1);
 }
 
-/* Lune (Thème Sombre) */
+/* Styles communs pour les images de lune et de soleil */
+.theme-toggle img {
+  position: absolute;
+  width: 28px; /* Ajustez la taille des icônes ici */
+  height: 28px;
+  object-fit: contain;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* États initiaux (Thème Sombre) */
 .moon {
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  background-color: transparent;
-  box-shadow: -6px 0 0 0 var(--toggle-moon-bg) inset; /* Effet croissant */
-  transition: opacity 0.3s ease;
+  opacity: 1;
+  transform: translateY(0);
 }
 
-/* Soleil (Thème Clair) */
 .sun {
-  width: 20px;
-  height: 20px;
-  background-color: var(--toggle-sun-bg);
-  border-radius: 50%;
-  position: absolute;
-  opacity: 0; /* Caché par défaut */
-  transition: opacity 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px); /* Soleil prêt à "monter" */
 }
 
-/* Rayons du soleil */
-.sun::before, .sun::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: var(--toggle-sun-bg);
-  border-radius: 2px;
+/* --- ÉTATS QUAND LE THÈME CLAIR EST ACTIVÉ --- */
+body.light-theme .theme-toggle {
+  background-color: rgba(0, 0, 0, 0.03); /* Fond subtil en clair */
 }
 
-.sun::before {
-  width: 2px;
-  height: 35px;
-}
-
-.sun::after {
-  width: 35px;
-  height: 2px;
-}
-
-/* États d'affichage de l'interrupteur */
 body.light-theme .moon {
   opacity: 0;
+  transform: translateY(-20px); /* Lune "monte" pour s'échapper */
 }
 
 body.light-theme .sun {
   opacity: 1;
+  transform: translateY(0); /* Soleil "monte" pour se placer */
 }
 
-/* --- SECTION HERO --- */
+/* --- SECTION HERO (simplifiée) --- */
 .hero-section {
   height: 80vh;
   display: flex;
@@ -198,297 +134,14 @@ body.light-theme .sun {
   line-height: 1.2;
 }
 
-.hero-content p {
-  font-size: 1.25rem;
-  opacity: var(--text-opacity);
-  margin-bottom: 2.5rem;
-}
-
-.hero-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-/* --- BOUTONS --- */
 .btn {
   display: inline-block;
   padding: 0.75rem 1.5rem;
   border-radius: 10px;
   text-decoration: none;
   font-weight: 600;
-  border: none;
   cursor: pointer;
   background-color: var(--accent);
   color: #ffffff;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-
-.btn-outline {
-  background-color: transparent;
-  border: 2px solid var(--accent);
-  color: var(--accent);
-}
-
-.btn-outline:hover {
-  background-color: var(--accent);
-  color: #ffffff;
-}
-
-/* --- SECTIONS GÉNÉRALES --- */
-.section {
-  max-width: 1100px;
-  margin: 6rem auto; 
-  padding: 0 2rem;
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.section.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.section h2 {
-  font-size: 2rem;
-  border-bottom: 2px solid var(--accent);
-  display: inline-block;
-  padding-bottom: 0.5rem;
-  margin-bottom: 2rem;
-}
-
-.section-alt {
-  background-color: var(--bg-alt-color);
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-  border-radius: 20px;
-}
-
-.section-text {
-  font-size: 1.05rem;
-  opacity: var(--text-opacity);
-  margin-bottom: 1rem;
-}
-
-.location {
-  font-style: italic;
-  margin-top: 1.5rem;
-}
-
-/* --- CARTES (CARDS) --- */
-.cards {
-  display: flex;
-  gap: 2rem;
-  flex-wrap: wrap;
-  margin-top: 2rem;
-}
-
-.card {
-  flex: 1 1 300px; /* Flexible mais avec une base */
-  background-color: var(--card-bg);
-  border-radius: 16px;
-  padding: 2rem;
-  border: 1px solid var(--border-color);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
-}
-
-.card h3 {
-  font-size: 1.25rem;
-  margin-bottom: 0.75rem;
-}
-
-.card h4 {
-  font-size: 1rem;
-  margin-top: 1rem;
-  margin-bottom: 0.5rem;
-}
-
-.card p, .card ul {
-  opacity: var(--text-opacity);
-  font-size: 0.95rem;
-}
-
-.card ul {
-  padding-left: 1.25rem;
-  margin-top: 0.5rem;
-}
-
-.card-link {
-  display: inline-block;
-  margin-top: 1rem;
-  color: var(--accent);
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.card-link:hover {
-  text-decoration: underline;
-}
-
-/* --- GRILLE DE COMPÉTENCES --- */
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
-}
-
-.skill-box {
-  background-color: var(--card-bg);
-  border: 1px solid var(--border-color);
-  border-radius: 12px;
-  padding: 1.5rem;
-}
-
-.skill-list {
-  list-style: none;
-  opacity: var(--text-opacity);
-}
-
-.skill-list li {
-  margin-bottom: 0.5rem;
-  font-size: 0.95rem;
-  position: relative;
-  padding-left: 1rem;
-}
-
-.skill-list li::before {
-  content: "•";
-  color: var(--accent);
-  position: absolute;
-  left: 0;
-}
-
-/* --- BTS SIO SPÉCIFIQUE --- */
-.referentiel-link {
-  color: var(--accent);
-  text-decoration: none;
-  font-weight: 500;
-  display: inline-block;
-  margin-bottom: 2rem;
-}
-
-.referentiel-link:hover {
-  text-decoration: underline;
-}
-
-/* --- FORMULAIRE DE CONTACT --- */
-.contact-form {
-  margin-top: 2rem;
-  max-width: 600px;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.contact-form input,
-.contact-form textarea {
-  padding: 0.75rem 1rem;
-  border-radius: 8px;
-  border: 1px solid var(--border-color);
-  background-color: var(--card-bg);
-  color: var(--text-color);
-  font-family: "Poppins", sans-serif;
-  transition: border-color 0.2s ease;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-  outline: none;
-  border-color: var(--accent);
-}
-
-.contact-form textarea {
-  min-height: 150px;
-  resize: vertical;
-}
-
-/* --- PIED DE PAGE --- */
-.footer {
-  text-align: center;
-  padding: 2rem 1rem;
-  margin-top: 4rem;
-  border-top: 1px solid var(--border-color);
-  opacity: var(--text-opacity);
-  font-size: 0.9rem;
-}
-
-/* --- MÉDIA QUERIES (RESPONSIVE) --- */
-
-/* Pour tablettes et portables (< 768px) */
-@media (max-width: 768px) {
-  html {
-    font-size: 15px; /* Réduit légèrement la base */
-  }
-
-  .nav-links {
-    display: none; /* Cache les liens, le burger prend le relais (votre JS actuel) */
-  }
-
-  .burger {
-    display: block;
-  }
-
-  .theme-toggle {
-    top: 15px;
-    right: 15px;
-    width: 45px;
-    height: 45px;
-  }
-
-  .hero-content h1 {
-    font-size: 2.25rem;
-  }
-
-  .hero-section {
-    height: auto;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-  }
-
-  .section {
-    margin: 4rem auto;
-    padding: 0 1.5rem;
-  }
-
-  .section h2 {
-    font-size: 1.75rem;
-  }
-
-  .cards {
-    gap: 1.5rem;
-  }
-
-  .card {
-    padding: 1.5rem;
-  }
-}
-
-/* Pour petits mobiles (< 480px) */
-@media (max-width: 480px) {
-  .hero-content h1 {
-    font-size: 1.8rem;
-  }
-
-  .hero-buttons {
-    flex-direction: column;
-    gap: 0.75rem;
-  }
-
-  .btn {
-    width: 100%;
-    text-align: center;
-  }
+  transition: transform 0.2s ease;
 }
