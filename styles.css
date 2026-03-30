@@ -8,6 +8,9 @@ html { scroll-behavior: smooth; }
   --card-bg: rgba(255, 255, 255, 0.05);
   --accent: #6c63ff;
   --header-bg: rgba(11, 15, 26, 0.95);
+  /* Couleurs pour le ciel nocturne */
+  --sky-top: #05070a;
+  --sky-bottom: #111827;
 }
 
 body.light-theme {
@@ -16,6 +19,9 @@ body.light-theme {
   --card-bg: #ffffff;
   --accent: #3b82f6;
   --header-bg: rgba(244, 247, 251, 0.95);
+  /* Couleurs pour le ciel clair */
+  --sky-top: #87ceeb;
+  --sky-bottom: #e0f2fe;
 }
 
 body {
@@ -23,6 +29,37 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
   transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* --- EFFETS D'ARRIÈRE-PLAN --- */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: linear-gradient(to bottom, var(--sky-top), var(--sky-bottom));
+  transition: background 0.5s ease;
+}
+
+/* Effet étoiles uniquement pour le mode sombre */
+body:not(.light-theme)::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.4;
+  background-image: 
+    radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+    radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+    radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 20px);
+  background-size: 550px 550px, 350px 350px, 250px 250px;
+  background-position: 0 0, 40px 60px, 130px 270px;
 }
 
 /* --- THEME TOGGLE --- */
