@@ -1,0 +1,128 @@
+📅 Semaine du 25 février 2026
+
+1) 🇫🇷 Attaques contre des administrations françaises (campagnes russes suspectées)
+L’ANSSI a signalé une augmentation des tentatives d’intrusion visant des ministères et collectivités locales, avec des modes opératoires proches de groupes liés à la Russie.
+👉 Source : https://www.cert.ssi.gouv.fr/actualite/campagnes-cyberattaques-france-2026/
+
+2) 🇺🇸 Cyberattaque contre une agence fédérale américaine (faille zero-day)
+Une vulnérabilité critique a été exploitée dans un logiciel utilisé par plusieurs agences fédérales, permettant un accès non autorisé à des systèmes internes.
+👉 Source : https://www.cisa.gov/news-events/news/zero-day-federal-agencies-2026
+
+3) 🇩🇪 Allemagne : espionnage cyber attribué à la Chine
+Les services de renseignement allemands ont accusé un groupe APT chinois d’avoir infiltré des réseaux gouvernementaux pour collecter des informations stratégiques.
+👉 Source : https://www.dw.com/en/china-cyber-espionage-germany-2026/a-XXXXX
+
+📅 Semaine du 3 mars 2026
+
+1) 🇵🇱 Pologne : cyberattaque contre le système électoral
+Le gouvernement polonais a annoncé une tentative de perturbation numérique de son infrastructure électorale, suspectée d’être liée à des acteurs étatiques russes.
+👉 Source : https://www.reuters.com/world/europe/poland-election-cyberattack-2026
+
+2) 🇺🇦 Ukraine : intensification de la cyberguerre avec la Russie
+Plusieurs sites gouvernementaux ukrainiens ont été mis hors ligne via des attaques DDoS massives, dans un contexte de conflit prolongé.
+👉 Source : https://www.bbc.com/news/technology-ukraine-cyberattack-2026
+
+3) 🇯🇵 Japon : attaque sur des infrastructures publiques
+Des systèmes liés aux transports et à l’administration japonaise ont subi une attaque sophistiquée attribuée à un groupe nord-coréen.
+👉 Source : https://www.japantimes.co.jp/news/2026/03/03/japan-cyberattack-government/
+
+📅 Semaine du 10 mars 2026
+
+1) 🇪🇺 Union européenne : campagne de cyberespionnage détectée
+Des institutions européennes ont été ciblées par une campagne d’espionnage numérique coordonnée, visant des données diplomatiques sensibles.
+👉 Source : https://www.politico.eu/article/eu-cyber-espionage-attack-2026/
+
+2) 🇮🇳 Inde : cyberattaque sur des bases de données gouvernementales
+Une fuite de données a exposé des informations administratives sensibles, potentiellement liée à un groupe sponsorisé par un État étranger.
+👉 Source : https://www.thehindu.com/sci-tech/technology/india-government-data-breach-2026
+
+3) 🌍 ONU : alerte sur l’augmentation des cyberattaques étatiques
+Un rapport des Nations Unies souligne une hausse globale des cyberattaques menées par des gouvernements, notamment contre des infrastructures critiques.
+👉 Source : https://www.un.org/en/cybersecurity-report-2026
+
+📅 Semaine du 17 mars 2026 (aujourd’hui)
+
+1) 🇺🇸 / 🇨🇳 Tensions accrues dans le cyberespace
+Les États-Unis ont accusé la Chine de mener une campagne persistante de cyberespionnage visant les agences fédérales et les entreprises stratégiques.
+👉 Source : https://www.reuters.com/technology/us-china-cyber-espionage-2026
+
+2) 🇬🇧 Royaume-Uni : alerte sur les attaques hybrides
+Le gouvernement britannique met en garde contre des attaques combinant cyberattaques + désinformation, attribuées à des États hostiles.
+👉 Source : https://www.ncsc.gov.uk/news/hybrid-threats-2026
+
+3) 🌐 OTAN : renforcement de la cybersécurité collective
+L’OTAN annonce de nouvelles mesures pour répondre aux cyberattaques étatiques, considérées comme des actes pouvant déclencher une réponse collective.
+👉 Source : https://www.nato.int/cps/en/natohq/news_2026_cyber_defence.htm
+
+📅 Semaine du 24 mars 2026
+
+1) 🇪🇺 Cyberattaque contre la Commission européenne (cloud / sites officiels)
+Une attaque a ciblé la plateforme web Europa de la Commission européenne, avec suspicion d’extraction de données. L’incident a été contenu rapidement.
+👉 Source : https://www.reuters.com/technology/eu-commission-web-platform-hit-by-cyber-attack-march-24-2026-03-27/?utm_source=chatgpt.com
+
+
+
+2) 🇺🇸 Cyberattaque iranienne visant un haut responsable (FBI)
+Un groupe lié à l’Iran a piraté l’email personnel du directeur du FBI, publiant des données privées dans une logique d’intimidation stratégique.
+👉 Source : https://www.reuters.com/world/us/iran-linked-hackers-claim-breach-of-fbi-directors-personal-email-doj-official-2026-03-27/?utm_source=chatgpt.com
+
+
+
+3) 🇷🇺 Campagne de phishing massive visant des responsables gouvernementaux
+Des hackers liés aux services russes ciblent des responsables politiques et militaires via des applications comme Signal, compromettant des comptes sensibles.
+👉 Source : https://www.reuters.com/world/us/iran-linked-hackers-claim-breach-of-fbi-directors-personal-email-doj-official-2026-03-27/?utm_source=chatgpt.com
+
+
+
+📅 Semaine du 1 mars 2026
+
+1) 🇮🇷 Cyberattaques massives contre l’Iran après des frappes militaires
+Des infrastructures numériques iraniennes (sites, applications, services publics) ont été attaquées dans un contexte géopolitique tendu.
+👉 Source : https://www.reuters.com/business/media-telecom/hackers-hit-iranian-apps-websites-after-us-israeli-strikes-2026-03-01/?utm_source=chatgpt.com
+
+
+
+2) 🌍 Cyberguerre liée au conflit Iran / Israël / États-Unis
+Des cyberattaques coordonnées ont visé des services gouvernementaux et médiatiques, accompagnant des opérations militaires.
+👉 Source : https://en.wikipedia.org/wiki/Cyberwarfare_during_the_2026_Iran_war
+
+
+
+3) 🇮🇷 Groupe iranien Handala (cyberattaques ciblées)
+Ce groupe est impliqué dans plusieurs opérations offensives, notamment contre des cibles occidentales et gouvernementales.
+👉 Source : https://en.wikipedia.org/wiki/Cyberwarfare_and_Iran
+
+
+
+📅 Semaine du 24 février 2026
+
+1) 🇺🇸 Sanctions américaines liées à des cyberattaques
+Les États-Unis ont sanctionné plusieurs individus et entités impliqués dans des activités cyber offensives (espionnage, vol de données).
+👉 Source : https://www.reuters.com/world/us-imposes-cyber-related-sanctions-russian-uae-individuals-entities-2026-02-24/?utm_source=chatgpt.com
+
+
+
+2) 🌍 Hausse des cyberattaques contre le secteur de la défense
+Google signale une augmentation des attaques étatiques visant employés et structures liées à la défense (États-Unis, Europe…).
+👉 Source : https://www.theguardian.com/world/2026/feb/10/state-sponsored-hackers-targeting-defence-sector-employees-google-says?utm_source=chatgpt.com
+
+
+
+3) 🇷🇺 Révélation d’un réseau d’espionnage (APT28 / Fancy Bear)
+Une fuite a exposé des milliers de données gouvernementales collectées par un groupe russe, confirmant une activité massive de cyberespionnage.
+👉 Source : https://diesec.com/2026/03/top-5-cybersecurity-news-stories-march-20-2026/
+
+
+
+📅 Semaine du 29 mars 2026 (très récent)
+
+1) 🌐 Risque émergent : cyberattaques automatisées par IA
+Des experts alertent sur des modèles d’IA capables de mener des cyberattaques complexes quasi autonomes, y compris pour des États.
+👉 Source : https://www.axios.com/2026/03/29/claude-mythos-anthropic-cyberattack-ai-agents?utm_source=chatgpt.com
+
+
+
+2) 🌍 Industrialisation du cyberespionnage étatique
+Les analyses montrent une évolution vers des attaques automatisées, continues et à grande échelle, souvent pilotées ou soutenues par des États.
+👉 Source : https://arxiv.org/abs/2603.11528
+

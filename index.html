@@ -4,25 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio - Nathan Mausse</title>
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <div class="theme-toggle" id="themeToggle">
-    <div class="moon">
-      </div>
-    <div class="sun"></div>
-  </div>
+  <button class="theme-toggle" id="themeToggle" aria-label="Changer le thème">
+    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+    </svg>
+  </button>
 
   <header class="header">
     <nav class="nav">
       <div class="logo">Nathan</div>
-
       <ul class="nav-links" id="navLinks">
         <li><a href="#home">Accueil</a></li>
         <li><a href="#about">À propos</a></li>
@@ -35,221 +39,148 @@
         <li><a href="#links">Liens</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-
       <button class="burger" id="burger">☰</button>
     </nav>
   </header>
 
-  <section id="home" class="hero-section">
-    <div class="hero-content">
-      <h1>Bonjour, je suis <span class="highlight neon">Nathan Mausse</span></h1>
-      <p class="neon">Étudiant BTS SIO — Développeur Web</p>
-
-      <div class="hero-buttons">
-        <a class="btn" href="#projects">Voir mes projets</a>
-        <a class="btn btn-outline" href="#contact">Me contacter</a>
+  <main>
+    <section id="home" class="hero-section">
+      <div class="hero-content">
+        <h1>Bonjour, je suis <span class="highlight">Nathan Mausse</span></h1>
+        <p>Étudiant BTS SIO — Développeur Web</p>
+        <div class="hero-buttons">
+          <a class="btn" href="#projects">Voir mes projets</a>
+          <a class="btn btn-outline" href="#contact">Me contacter</a>
+        </div>
       </div>
-    </div>
-  </section>
-
-  <section id="about" class="section">
-    <h2>À propos</h2>
-    <p class="section-text">
-      Passionné par l’informatique depuis plusieurs années, j’aime comprendre comment
-      fonctionnent les systèmes et créer des solutions concrètes.  
-      Aujourd’hui en BTS SIO SLAM, je développe mes compétences en développement web,
-      cybersécurité et réseaux avec un objectif clair : progresser chaque jour.
-    </p>
-    <p class="section-text location">
-      Vaux-Le-Pénil (77000) — France
-    </p>
-  </section>
-
-  <section id="parcours" class="section section-alt">
-    <h2>Parcours professionnel</h2>
-
-    <div class="cards">
-      <div class="card">
-        <h3>Job d’été — Crédit Agricole Titres (Brunoy)</h3>
-        <p><strong>Périodes :</strong> août 2024 & août 2025</p>
-        <p>
-          Missions réalisées au sein de l’entreprise dans le service coupon national et international,
-          ainsi que dans le service d’épargne salariale.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Stage informatique — Crédit Agricole Titres (Brunoy)</h3>
-        <p><strong>Période :</strong> janvier 2026</p>
-        <p>
-          Stage réalisé au sein de l’équipe informatique (service négociations).
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section id="skills" class="section">
-    <h2>Compétences techniques</h2>
-
-    <div class="skills-grid">
-      <div class="skill-box">
-        <h3>Développement</h3>
-        <ul class="skill-list">
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JavaScript</li>
-          <li>PHP</li>
-          <li>Java</li>
-        </ul>
-      </div>
-
-      <div class="skill-box">
-        <h3>Réseau / Sécurité</h3>
-        <ul class="skill-list">
-          <li>Cisco</li>
-          <li>Switches / Routers</li>
-          <li>Nmap</li>
-          <li>Wireshark</li>
-        </ul>
-      </div>
-
-      <div class="skill-box">
-        <h3>Base de données</h3>
-        <ul class="skill-list">
-          <li>SQL</li>
-          <li>Microsoft SQL Server</li>
-        </ul>
-      </div>
-
-      <div class="skill-box">
-        <h3>Systèmes</h3>
-        <ul class="skill-list">
-          <li>Linux</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section id="projects" class="section section-alt">
-    <h2>Projets informatiques</h2>
-
-    <div class="cards">
-      <div class="card">
-        <h3>Koo2Fourchette</h3>
-        <p>Site vitrine basé sur une maquette, réalisé en HTML/CSS.</p>
-        <a class="card-link" href="#" target="_blank">Voir le projet</a>
-      </div>
-
-      <div class="card">
-        <h3>Site restauration</h3>
-        <p>Création d'un site où l'on peut réserver des plats, la quantité, etc...</p>
-        <a class="card-link" href="#" target="_blank">Voir le projet</a>
-      </div>
-
-      <div class="card">
-        <h3>Projet Symfony</h3>
-        <p>Création du front end et back end d'un site vitrine pour un club de sport au choix en utilisant Symfony.</p>
-        <a class="card-link" href="#" target="_blank">Voir le projet</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="bts" class="section">
-    <h2>Résumé de la formation BTS SIO</h2>
-    <p class="section-text">
-      Le BTS SIO (Services Informatiques aux Organisations) est un diplôme français de niveau bac+2, 
-      qui forme des techniciens spécialisés dans le domaine de l'informatique et des systèmes d'information. 
-      Ce diplôme est particulièrement axé sur les besoins des entreprises en matière de gestion, 
-      développement et sécurité des systèmes informatiques. Il se divise en deux spécialités :
-    </p>
-    <a class="referentiel-link" href="https://pedagogie.ac-reunion.fr/fileadmin/ANNEXES-ACADEMIQUES/03-PEDAGOGIE/02-COLLEGE%2Flangues-vivantes%2Fanglais%2Fimages_Nawaz%2FBTS_SIO%2FREFERENTIEL_BTS_SIO-_RENOVATION_SESSION_2022-SIGNETS.pdf" target="_blank">Lien vers le référentiel BTS SIO</a>
-    
-    <div class="cards">
-      <div class="card">
-        <h3>Option SLAM</h3>
-        <p>L'acronyme SLAM signifie « Solutions logicielles et applications métiers ». Cette spécialité est orientée vers le développement d’applications informatiques et la gestion des données. 
-        Les diplômés de SLAM conçoivent, développent et maintiennent des logiciels adaptés aux besoins spécifiques des entreprises.</p>
-        <h4>Débouchés possibles :</h4>
-        <ul>
-          <li>Développeur d’applications</li>
-          <li>Analyste programmeur</li>
-          <li>Chargé d'études informatiques</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h3>Option SISR</h3>
-        <p>L'acronyme SISR signifie « Solutions d’infrastructure, systèmes et réseaux ». Cette option est destinée aux étudiants qui s’orientent vers les métiers liés à la conception et la maintenance d’infrastructures réseaux.
-        Assurer la sécurité, la maintenance et l’installation des réseaux et des équipements informatiques.</p>
-        <h4>Débouchés possibles :</h4>
-        <ul>
-          <li>Administrateur systèmes et réseaux</li>
-          <li>Technicien d’infrastructure</li>
-          <li>Support systèmes et réseaux</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section id="veille" class="section section-alt">
-    <h2>Veille technologique</h2>
     </section>
 
-  <section id="documents" class="section">
-    <h2>Documents</h2>
+    <section id="about" class="section">
+      <h2>À propos</h2>
+      <p class="section-text">Passionné par l’informatique depuis plusieurs années, j’aime comprendre comment fonctionnent les systèmes et créer des solutions concrètes. Aujourd’hui en BTS SIO SLAM, je développe mes compétences en développement web, cybersécurité et réseaux avec un objectif clair : progresser chaque jour.</p>
+      <p class="section-text location">Vaux-Le-Pénil (77000) — France</p>
+    </section>
 
-    <div class="cards">
-      <div class="card">
-        <h3>Rapport de stage</h3>
-        <p>Lien vers mon rapport de stage (PDF).</p>
-        <a class="card-link" href="docs/rapport-stage.pdf" target="_blank">Télécharger</a>
+    <section id="skills" class="section">
+      <h2>Compétences techniques</h2>
+      <div class="skills-grid">
+        <div class="skill-box">
+          <h3>Développement</h3>
+          <p>
+            HTML <img src="docs/images/html-icon.png" alt="HTML">, 
+            CSS <img src="docs/images/css-icon.png" alt="CSS">, 
+            JavaScript <img src="docs/images/javascript-icon.png" alt="JavaScript">, 
+            PHP <img src="docs/images/php-icon.png" alt="PHP">, 
+            Java <img src="docs/images/java-icon.png" alt="Java">
+          </p>
+        </div>
+        <div class="skill-box">
+          <h3>Réseau / Sécurité</h3>
+          <p>
+            Cisco <img src="docs/images/cisco-icon.png" alt="Cisco">, 
+            Switches / Routers <img src="docs/images/routers-icon.png" alt="Switches / Routers">, 
+            Nmap <img src="docs/images/nmap-icon.png" alt="Nmap">, 
+            Wireshark <img src="docs/images/wireshark-icon.png" alt="Wireshark">
+          </p>
+        </div>
+        <div class="skill-box">
+          <h3>Base de données</h3>
+          <p>
+            SQL <img src="docs/images/sql-icon.png" alt="SQL">, 
+            Microsoft SQL Server <img src="docs/images/microsoft-icon.png" alt="Microsoft SQL Server">
+          </p>
+        </div>
+        <div class="skill-box">
+          <h3>Systèmes</h3>
+          <p>
+            Linux <img src="docs/images/linux-icon.png" alt="Linux">
+          </p>
+        </div>
       </div>
+    </section>
 
-      <div class="card">
-        <h3>CV</h3>
-        <p>Mon CV à jour (PDF).</p>
-        <a class="card-link" href="docs/cv-nathan-mausse.pdf" target="_blank">Télécharger</a>
+    <section id="parcours" class="section section-alt">
+      <h2>Parcours professionnel</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Job d’été — Crédit Agricole Titres (Brunoy)</h3>
+          <p><strong>août 2024 & août 2025</strong></p>
+          <p>Missions réalisées au sein de l’entreprise dans le service coupon national et international, ainsi que dans le service d’épargne salariale.</p>
+        </div>
+        <div class="card">
+          <h3>Stage informatique — Crédit Agricole Titres (Brunoy)</h3>
+          <p><strong>janvier 2026</strong></p>
+          <p>Stage réalisé au sein de l’équipe informatique (service négociations).</p>
+        </div>
       </div>
+    </section>
 
-      <div class="card">
-        <h3>Lettre de motivation</h3>
-        <p>Lettre pour recherche d’alternance (PDF).</p>
-        <a class="card-link" href="docs/lettre-motivation.docx" target="_blank">Télécharger</a>
+    <section id="projects" class="section section-alt">
+      <h2>Projets informatiques</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Koo2Fourchette</h3>
+          <p>Site vitrine basé sur une maquette, réalisé en HTML/CSS.</p>
+          <a class="card-link" href="#" target="_blank">Voir le projet</a>
+        </div>
+        <div class="card">
+          <h3>Site restauration</h3>
+          <p>Création d'un site où l'on peut réserver des plats, la quantité, etc...</p>
+          <a class="card-link" href="#" target="_blank">Voir le projet</a>
+        </div>
+        <div class="card">
+          <h3>Projet Symfony</h3>
+          <p>Création du front end et back end d'un site vitrine pour un club de sport au choix en utilisant Symfony.</p>
+          <a class="card-link" href="#" target="_blank">Voir le projet</a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="links" class="section section-alt">
-    <h2>Liens utiles</h2>
-
-    <div class="cards">
-      <div class="card">
-        <h3>Référentiel officiel BTS SIO</h3>
-        <a class="card-link" href="https://www.education.gouv.fr/" target="_blank">
-          Accéder au site officiel
-        </a>
+    <section id="bts" class="section">
+      <h2>Résumé de la formation BTS SIO</h2>
+      <p class="section-text">Le BTS SIO (Services Informatiques aux Organisations) est un diplôme français de niveau bac+2 axé sur les besoins des entreprises en matière de gestion, développement et sécurité des systèmes d’information.</p>
+      <a class="referentiel-link" href="https://pedagogie.ac-reunion.fr/fileadmin/ANNEXES-ACADEMIQUES/03-PEDAGOGIE/02-COLLEGE%2Flangues-vivantes%2Fanglais%2Fimages_Nawaz%2FBTS_SIO%2FREFERENTIEL_BTS_SIO-_RENOVATION_SESSION_2022-SIGNETS.pdf" target="_blank">Référentiel BTS SIO</a>
+      <div class="cards">
+        <div class="card">
+          <h3>Option SLAM</h3>
+          <p>Solutions logicielles et applications métiers (Développement).</p>
+        </div>
+        <div class="card">
+          <h3>Option SISR</h3>
+          <p>Solutions d’infrastructure, systèmes et réseaux.</p>
+        </div>
       </div>
+    </section>
 
-      <div class="card">
-        <h3>Campus Saint Aspais</h3>
-        <a class="card-link" href="https://institutionsaintaspais.fr" target="_blank">
-          Accéder au site du Campus
-        </a>
+    <section id="veille" class="section section-alt">
+      <h2>Veille technologique</h2>
+      <div class="card" style="width: 100%;">
+        <h3>Cybersécurité et Menaces Émergentes</h3>
+        <p>Ma veille porte sur l'évolution des attaques informatiques et les nouvelles méthodes de protection (IA, Zero Trust). Je surveille les vulnérabilités critiques via l'ANSSI et des flux spécialisés.</p>
       </div>
-    </div>
-  </section>
+      <a href="docs/veille.txt" class="btn" target="_blank">📄 Consulter la veille complète</a>
+    </section>
 
-  <section id="contact" class="section">
-    <h2>Contact</h2>
+    <section id="documents" class="section">
+      <h2>Documents</h2>
+      <div class="cards">
+        <div class="card"><h3>Rapport de stage</h3><a class="card-link" href="docs/rapport-stage.pdf">Télécharger</a></div>
+        <div class="card"><h3>CV</h3><a class="card-link" href="docs/cv-nathan-mausse.pdf">Télécharger</a></div>
+        <div class="card"><h3>Lettre de motivation</h3><a class="card-link" href="docs/lettre-motivation.docx">Télécharger</a></div>
+      </div>
+    </section>
 
-    <form id="contact-form" class="contact-form">
-      <input type="text" id="name" placeholder="Votre nom" required>
-      <input type="email" id="email" placeholder="Votre email" required>
-      <textarea id="message" placeholder="Votre message" required></textarea>
-      <button type="submit" class="btn">Envoyer</button>
-    </form>
-    <p id="response-msg"></p>
-  </section>
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <form id="contact-form" class="contact-form">
+        <input type="text" id="name" placeholder="Votre nom" required>
+        <input type="email" id="email" placeholder="Votre email" required>
+        <textarea id="message" placeholder="Votre message" required></textarea>
+        <button type="submit" class="btn">Envoyer</button>
+      </form>
+      <p id="response-msg"></p>
+    </section>
+  </main>
 
   <footer class="footer">
     <p>© 2026 Nathan Mausse — Portfolio BTS SIO</p>

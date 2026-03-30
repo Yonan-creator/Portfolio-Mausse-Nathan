@@ -1,147 +1,110 @@
 /* --- STYLES GLOBAUX --- */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
 
-html {
-  scroll-behavior: smooth;
-  font-size: 16px;
-}
-
-/* --- VARIABLES DE THÈME --- */
 :root {
-  /* Thème Sombre (Défaut) */
   --bg-color: #0b0f1a;
   --text-color: #ffffff;
-  --text-opacity: 0.85;
+  --card-bg: rgba(255, 255, 255, 0.05);
   --accent: #6c63ff;
-  --header-bg: rgba(10, 10, 20, 0.9);
-  --toggle-shadow: 0 4px 10px rgba(108, 99, 255, 0.3); /* Lueur violette subtile */
+  --header-bg: rgba(11, 15, 26, 0.95);
 }
 
 body.light-theme {
-  /* Thème Clair */
   --bg-color: #f4f7fb;
   --text-color: #1a1a1a;
-  --text-opacity: 0.9;
-  --accent: #ff9800;
+  --card-bg: #ffffff;
+  --accent: #3b82f6;
   --header-bg: rgba(244, 247, 251, 0.95);
-  --toggle-shadow: 0 4px 10px rgba(255, 152, 0, 0.3); /* Lueur orange subtile */
 }
 
-/* --- CORPS DE PAGE --- */
 body {
   font-family: "Poppins", sans-serif;
   background-color: var(--bg-color);
   color: var(--text-color);
-  letter-spacing: 0.3px;
-  line-height: 1.6;
-  transition: background-color 0.4s ease, color 0.4s ease;
+  transition: background 0.4s ease, color 0.4s ease;
 }
 
-/* --- EN-TÊTE --- */
-.header {
-  position: sticky;
-  top: 0;
-  z-index: 999;
-  background-color: var(--header-bg);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.nav {
-  max-width: 1100px;
-  margin: auto;
-  padding: 1rem 1.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* --- INTERRUPTEUR DE THÈME (GÈRE MAINTENANT LES IMAGES) --- */
+/* --- THEME TOGGLE --- */
 .theme-toggle {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  width: 50px;
-  height: 50px;
-  cursor: pointer;
-  z-index: 1001; /* Au-dessus du header */
+  position: fixed; top: 25px; right: 25px; width: 50px; height: 50px;
+  border-radius: 50%; border: none; cursor: pointer; z-index: 2000;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--card-bg); color: var(--text-color);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2); transition: transform 0.3s;
+}
+.theme-toggle svg { width: 26px; height: 26px; }
+.sun-icon { display: none; color: #f59e0b; }
+.moon-icon { display: block; color: #f1f5f9; }
+body.light-theme .sun-icon { display: block; }
+body.light-theme .moon-icon { display: none; }
+
+/* --- NAVIGATION --- */
+.header { position: sticky; top: 0; z-index: 1000; background: var(--header-bg); backdrop-filter: blur(8px); padding: 1rem 0; }
+.nav { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 2rem; }
+.logo { font-size: 1.5rem; font-weight: 700; color: var(--accent); }
+.nav-links { display: flex; list-style: none; gap: 1.5rem; }
+.nav-links a { text-decoration: none; color: var(--text-color); font-weight: 500; opacity: 0.8; }
+.nav-links a:hover { opacity: 1; color: var(--accent); }
+
+/* --- SECTION COMPÉTENCES & ICÔNES --- */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.skill-box {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.skill-box h3 {
+  margin-bottom: 1rem;
+  color: var(--accent);
+}
+
+/* Alignement des icônes à côté du texte */
+.skill-box p {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  box-shadow: var(--toggle-shadow);
-  transition: transform 0.3s ease, background-color 0.4s ease;
-  overflow: hidden; /* Pour garder les images dans le cercle */
-  background-color: rgba(255, 255, 255, 0.05); /* Fond très subtil */
+  flex-wrap: wrap;
+  align-items: center; /* Aligne verticalement l'image et le texte */
+  gap: 8px; /* Espace entre le texte et l'image */
+  line-height: 2;
 }
 
-.theme-toggle:hover {
-  transform: scale(1.1);
-}
-
-/* Styles communs pour les images de lune et de soleil */
-.theme-toggle img {
-  position: absolute;
-  width: 28px; /* Ajustez la taille des icônes ici */
-  height: 28px;
+.skill-box img {
+  width: 20px; /* Taille de l'icône */
+  height: auto;
   object-fit: contain;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  vertical-align: middle;
 }
 
-/* États initiaux (Thème Sombre) */
-.moon {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.sun {
-  opacity: 0;
-  transform: translateY(20px); /* Soleil prêt à "monter" */
-}
-
-/* --- ÉTATS QUAND LE THÈME CLAIR EST ACTIVÉ --- */
-body.light-theme .theme-toggle {
-  background-color: rgba(0, 0, 0, 0.03); /* Fond subtil en clair */
-}
-
-body.light-theme .moon {
-  opacity: 0;
-  transform: translateY(-20px); /* Lune "monte" pour s'échapper */
-}
-
-body.light-theme .sun {
-  opacity: 1;
-  transform: translateY(0); /* Soleil "monte" pour se placer */
-}
-
-/* --- SECTION HERO (simplifiée) --- */
-.hero-section {
-  height: 80vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 2rem;
-}
-
-.hero-content h1 {
-  font-size: 3rem;
-  font-weight: 500;
-  line-height: 1.2;
-}
-
+/* --- AUTRES SECTIONS --- */
+.hero-section { height: 60vh; display: flex; align-items: center; justify-content: center; text-align: center; }
+.highlight { color: var(--accent); }
+.section { max-width: 1100px; margin: 4rem auto; padding: 0 2rem; }
+.section-alt { background: var(--card-bg); padding: 3rem 2rem; border-radius: 20px; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+.card { background: var(--card-bg); padding: 2rem; border-radius: 15px; border: 1px solid rgba(255,255,255,0.05); }
+.btn { padding: 0.8rem 2rem; background: var(--accent); color: white; border: none; border-radius: 8px; cursor: pointer; text-decoration: none; display: inline-block; font-weight: 600; }
 .btn {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  border-radius: 10px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  background: var(--accent);
+  color: white;
   text-decoration: none;
-  font-weight: 600;
-  cursor: pointer;
-  background-color: var(--accent);
-  color: #ffffff;
-  transition: transform 0.2s ease;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .nav-links { display: none; }
 }
